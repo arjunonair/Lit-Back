@@ -62,7 +62,7 @@ model Favorite {
 }
 
 model Book {
-  id             String  @id
+  id             String  @id @default(cuid())
   bookID         String?
   romanizedTitle String?
   englishTitle   String?

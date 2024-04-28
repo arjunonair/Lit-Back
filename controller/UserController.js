@@ -34,7 +34,6 @@ export const signUp = async (req, res) =>{
     }
 };
 
-
 // Login
 export const login = async (req, res) => {
   try {

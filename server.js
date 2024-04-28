@@ -19,8 +19,10 @@ app.get("/" , (req, res) =>{
 
 //ROUTES
 import userRouter from "./routes/userRoute.js"
+import bookRouter from "./routes/bookRoute.js"
 
 app.use("/api/user",userRouter)
+app.use("/api/book",bookRouter)
 
 
 app.listen(PORT, () => {

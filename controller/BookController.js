@@ -55,7 +55,19 @@ export const searchBooks = async (req, res) => {
     // Execute the search query
     const books = await prisma.book.findMany({
       where,
-      include: { tag: true, genres: true },
+      select: {
+        id: true,
+        englishTitle: true,
+        romanizedTitle: true,
+        publicRating: true,
+        Description: true,
+        coverUrl: true,
+        chapters: true,
+        genres: true,
+        ratingCount: true,
+        authors: true,
+        firstPublished: true,
+      },
     });
 
     return res.json({ books });

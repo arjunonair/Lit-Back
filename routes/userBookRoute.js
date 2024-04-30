@@ -4,8 +4,8 @@ import { createUserBook, deleteUserBook, getUserBooks, updateUserBook } from "..
 const router = Router()
 
 router.post( '/', createUserBook)
-router.get( '/', getUserBooks)
-router.put( "/:uid/:bid", updateUserBook)
-router.delete( '/', deleteUserBook)
+router.get( "/:uid/:bid", getUserBooks)
+router.put( '/:uid/:bid', updateUserBook)
+router.delete( "/:uid/:bid", deleteUserBook)
 
 export default router;

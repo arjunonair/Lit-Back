@@ -62,7 +62,7 @@ export const login = async (req, res) => {
       data: { userAuthToken: token },
     });
 
-    return res.json({ token });
+    return res.json(user.id);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });

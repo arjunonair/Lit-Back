@@ -101,7 +101,7 @@ export const getUserBooks = async (req, res) => {
       },
     });
 
-    return res.json( userBooks );
+    return res.json( {userBooks} );
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });

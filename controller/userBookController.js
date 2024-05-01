@@ -19,7 +19,7 @@ export const createUserBook = async (req, res) => {
       },
     });
 
-    return res.status(201).json({ message: "UserBook created successfully", userBook: newUserBook });
+    return res.status(201).json({ userBook: newUserBook });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
@@ -55,7 +55,7 @@ export const updateUserBook = async (req, res) => {
       return res.status(404).json({ error: "UserBook not found" });
     }
 
-    return res.json({ message: "UserBook updated successfully" });
+    return res.json( "UserBook updated successfully" );
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
@@ -78,13 +78,12 @@ export const deleteUserBook = async (req, res) => {
       return res.status(404).json({ error: "UserBook not found" });
     }
 
-    return res.json({ message: "UserBook deleted successfully" });
+    return res.json( "UserBook deleted successfully" );
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
   }
 };
-
 
 export const getUserBooks = async (req, res) => {
   try {
@@ -102,7 +101,7 @@ export const getUserBooks = async (req, res) => {
       },
     });
 
-    return res.json({ userBooks });
+    return res.json( userBooks );
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: "Internal server error" });
